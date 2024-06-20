@@ -12,19 +12,11 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "numerosParesServlet",value = "/numerosPares")
 public class NumerosParesServlet extends HttpServlet {
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
     public NumerosParesServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-
-    /**
-     * @see HttpServlet#doGet(HttpServletRequest request,
-            HttpServletResponse response)
-     */
     protected void doGet(HttpServletRequest request, HttpServletResponse
             response) throws ServletException, IOException {
 
@@ -32,9 +24,9 @@ public class NumerosParesServlet extends HttpServlet {
 
         UtilesGeneral utilesgeneral = new UtilesGeneral();
         boolean esPar = utilesgeneral.esPar(num);
-        String stringEsPar= esPar? "Verdadero": "Falso";
+        String stringEsPar= esPar? "Par": "Impar";
 
-        String message = num + " Es Par?: " + stringEsPar;
+        String message = "El numero " + num + " es: " + stringEsPar;
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
@@ -43,10 +35,6 @@ public class NumerosParesServlet extends HttpServlet {
         out.println("</body></html>");
     }
 
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request,
-            HttpServletResponse response)
-     */
     protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }

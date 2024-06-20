@@ -1,7 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@page import="cl.praxis.desafiojsp.utiles.UtilesGeneral"%>
 <%
-    // Incluye clases requeridas
     UtilesGeneral utilesgeneral = new UtilesGeneral();
 %>
 <!DOCTYPE html>
@@ -40,8 +39,8 @@ gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
                 <tr>
                     <th scope="row"><%=x + 1%></th>
                     <th>Número <%=x + 1%></th>
-                    <td><a href=factorial?num=<%=x + 1%>><%=utilesgeneral.getFactorial(x+1)%></a></td>
-                    <td><a href=numerosPares?num=<%=x + 1%>><%=utilesgeneral.esPar(x+1)? "Verdadero": "Falso"%></a></td>
+                    <td><a href=factorial?num=<%=x + 1%>>Factorial de <%= x+1%></a></td>
+                    <td><a href=numerosPares?num=<%=x + 1%>>¿Es impar o par el numero <%=x+1%>?</a></td>
                 </tr>
                 <%
                     }
